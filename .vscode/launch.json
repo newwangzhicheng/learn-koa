@@ -5,13 +5,14 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "pwa-node",
-      "request": "launch",
-      "name": "Launch koa",
+      "name": "attach to node",
+      "request": "attach",
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/demo/helloworld.js"
+      "restart": true,
+      "processId": "${command:PickProcess}",
+      "type": "node"
     }
   ]
 }
